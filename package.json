@@ -12,6 +12,7 @@
         "@wdio/spec-reporter": "^7.23.0",
         "chromedriver": "^104.0.0",
         "eslint-config-prettier": "^8.5.0",
+        "eslint-config-standard": "^17.0.0",
         "eslint-plugin-mocha": "^10.1.0",
         "wdio-chromedriver-service": "^7.3.2"
     },
