@@ -2,7 +2,7 @@ import Page from "./page";
 
 class ABPage extends Page {
   get heading() {
-    return$("h3");
+    return $("h3");
   }
 
   get footerLink() {
