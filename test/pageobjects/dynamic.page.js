@@ -29,12 +29,20 @@ class DynamicPage extends Page {
     return $("#input-example button");
   }
 
+  get input() {
+    return $("#input-example input");
+  }
+
   open() {
     return super.open("dynamic_controls");
   }
 
   toggleCheckbox() {
     this.ARbutton.click();
+  }
+
+  toggleInput() {
+    this.EDbutton.click();
   }
 }
 

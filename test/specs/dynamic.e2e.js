@@ -13,8 +13,18 @@ describe("Dynamic Test", function () {
     await expect(DynamicPage.checkbox).toBePresent();
     await DynamicPage.toggleCheckbox();
     await expect(DynamicPage.message).toBePresent();
-    // await expect(DynamicPage.message).toHaveTextContaining(/wait/i);
+    await expect(DynamicPage.message).toHaveTextContaining(/gone/i);
     await expect(DynamicPage.loadingBar).toBePresent();
     await expect(DynamicPage.checkbox).not.toBeDisplayed();
+  });
+
+  it("should enable text input", async function () {
+    await DynamicPage.open();
+    await expect(DynamicPage.EDbutton).toBePresent();
+    await expect(DynamicPage.input).toBeDisabled();
+    await DynamicPage.toggleInput();
+    await expect(DynamicPage.message).toBePresent();
+    await expect(DynamicPage.loadingBar).toBePresent();
+    await expect(DynamicPage.input).toBeEnabled();
   });
 });
